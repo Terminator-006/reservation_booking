@@ -1,13 +1,8 @@
-import { CustomButton } from "../components/ui/custom-button";
-import { CustomInput } from "../components/ui/custom-input";
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu"
+import { Input } from "../components/ui/input"
+
 import { Hammer, Calendar, User, LogIn, Search } from "lucide-react"
+import { Button } from "../components/ui/button"
 
 const HomePage = () => {
   return (
@@ -21,7 +16,7 @@ const HomePage = () => {
                 <Hammer className="h-8 w-8 text-blue-500" />
                 <span className="ml-2 text-xl font-bold text-gray-800">CarpenterBook</span>
               </div>
-              <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              {/* <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
@@ -58,13 +53,13 @@ const HomePage = () => {
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
-              </div>
+              </div> */}
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:items-center">
-              <CustomButton variant="outline" className="mr-2" icon={<LogIn className="h-4 w-4" />}>
+              <Button variant="outline" className="mr-2" icon={<LogIn className="h-4 w-4" />}>
                 Login
-              </CustomButton>
-              <CustomButton icon={<User className="h-4 w-4" />}>Sign Up</CustomButton>
+              </Button>
+              <Button icon={<User className="h-4 w-4" />}>Sign Up</Button>
             </div>
           </div>
         </div>
@@ -81,14 +76,14 @@ const HomePage = () => {
                 available time slots and get your work done efficiently.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-between">
-                <CustomButton className="w-full sm:w-auto mb-4 sm:mb-0" icon={<Calendar className="h-4 w-4" />}>
+                <Button className="w-full sm:w-auto mb-4 sm:mb-0" icon={<Calendar className="h-4 w-4" />}>
                   View Available Slots
-                </CustomButton>
+                </Button>
                 <div className="flex w-full sm:w-auto">
-                  <CustomInput placeholder="Enter your location" className="rounded-l-md" />
-                  <CustomButton className="rounded-l-none" icon={<Search className="h-4 w-4" />}>
+                  <Input placeholder="Enter your location" className="rounded-l-md" />
+                  <Button className="rounded-l-none" icon={<Search className="h-4 w-4" />}>
                     Search
-                  </CustomButton>
+                  </Button>
                 </div>
               </div>
             </div>
